@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 345" width="100%" height="100%" role="img" aria-label="Nancy - GitHub Profile Hero Card">
+  <defs>
+    <!-- Animated blue shine gradient sweeping across the name -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141413" />
+      <stop offset="38%" stop-color="#141413" />
+      <stop offset="50%" stop-color="#3B5BFF" />
+      <stop offset="62%" stop-color="#141413" />
+      <stop offset="100%" stop-color="#141413" />
+      <animateTransform attributeName="gradientTransform" type="translate" from="-500 0" to="800 0" dur="4.5s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .card-bg {
+      fill: #F4F3EE;
+    }
+
+    /* Kicker row */
+    .status-dot {
+      fill: #4E6AF6;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    .kicker {
+      font-family: 'Geist Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12.5px;
+      font-weight: 500;
+      fill: #6C6B66;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    /* Tall Editorial Serif Heading */
+    .serif-upright {
+      font-family: 'Instrument Serif', 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-size: 124px;
+      font-weight: 400;
+      fill: url(#shine);
+      letter-spacing: -0.03em;
+    }
+
+    .serif-italic-span {
+      font-style: italic;
+      letter-spacing: -0.02em;
+    }
+
+    /* Bio text */
+    .bio {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 21px;
+      font-weight: 400;
+      fill: #454440;
+      letter-spacing: -0.01em;
+    }
+
+    /* Footer link */
+    .link-text {
+      font-family: 'Geist Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 15.5px;
+      font-weight: 400;
+      fill: #3A3935;
+      letter-spacing: 0.02em;
+    }
+
+    .arrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 16px;
+      fill: #4E6AF6;
+      animation: nudge 2.2s ease-in-out infinite;
+    }
+
+    /* Staggered Entrance Animations */
+    .anim-1 { opacity: 0; animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.10s forwards; }
+    .anim-2 { opacity: 0; animation: rise 0.70s cubic-bezier(0.22, 1, 0.36, 1) 0.24s forwards; }
+    .anim-3 { opacity: 0; animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.40s forwards; }
+    .anim-4 { opacity: 0; animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.55; transform: scale(0.86); }
+    }
+
+    @keyframes nudge {
+      0%, 100% { transform: translate(0, 0); }
+      50%      { transform: translate(3px, -3px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim-1, .anim-2, .anim-3, .anim-4 {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+      }
+      .status-dot, .arrow {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- Warm Off-White Paper Card Background -->
+  <rect class="card-bg" x="0" y="0" width="760" height="345" rx="20" />
+
+  <!-- 1. Top Status Kicker -->
+  <g class="anim-1">
+    <rect class="status-dot" x="58" y="52" width="10" height="10" rx="2.5" />
+    <text class="kicker" x="80" y="61.5">FULL STACK DEVELOPER · AGENTIC AI</text>
+  </g>
+
+  <!-- 2. Main Editorial Serif Name (with mid-word italic + sweeping blue shine) -->
+  <g class="anim-2">
+    <g transform="translate(58, 184) scale(0.88, 1.06)">
+      <text class="serif-upright" x="0" y="0">Na<tspan class="serif-italic-span">nc</tspan>y</text>
+    </g>
+  </g>
+
+  <!-- 3. Two-Line Bio Description -->
+  <g class="anim-3">
+    <text class="bio" x="58" y="244">I build full-stack AI products, engineer agentic workflows,</text>
+    <text class="bio" x="58" y="276">and solve algorithmic problems every day.</text>
+  </g>
+
+  <!-- 4. Bottom Link with Properly Spaced Nudging Blue Arrow -->
+  <g class="anim-4">
+    <text class="link-text" x="58" y="314">github.com/Nancy7089</text>
+    <g transform="translate(264, 314)">
+      <text class="arrow" x="0" y="0">↗</text>
+    </g>
+  </g>
+</svg>
