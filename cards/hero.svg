@@ -129,7 +129,7 @@
 
   <!-- 4. Bottom Link with Properly Spaced Nudging Blue Arrow -->
   <g class="anim-4">
-    <text class="link-text" x="58" y="314">github.com/Nancy7089</text>
+    <text class="link-text" x="58" y="314">LinkedIn</text>
     <g transform="translate(264, 314)">
       <text class="arrow" x="0" y="0">↗</text>
     </g>
